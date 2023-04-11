@@ -88,9 +88,9 @@ export default class Things3Plugin extends Plugin {
 				}
 
 				if (firstLetterIndex > 0) {
-					view.editor.replaceRange(`[${line}](things:///show?id=${todoID})`, startRange, endRange);
+					view.editor.replaceRange(`${" → [things]"+(things:///show?id=${todoID})`, endRange, endRange);
 				} else {
-					view.editor.replaceRange(`- [ ] [${line}](things:///show?id=${todoID})`, startRange, endRange);
+					view.editor.replaceRange(`- [ ] [${line}](things:///show?id=${todoID})`, endRange, endRange);
 				}
 			}
 		});
